@@ -2,8 +2,13 @@ package com.billyhornfinal.springboot.daos;
 
 import java.util.List;
 
-import com.billyhornfinal.springboot.models.Food;
+import com.billyhornfinal.springboot.entities.Food;
 
+/**
+ * The methods declared in this interface are to provide basic CRUD functionality related to food objects.
+ * @author bHorn
+ *
+ */
 public interface FoodDao {
 	
 	/**
@@ -11,30 +16,24 @@ public interface FoodDao {
 	 * @param food
 	 */
 	void add(Food food);
-	
+
 	/**
-	 * Updates information about Food
+	 * Updates the information about an food already in storage.
 	 * @param food
 	 */
 	void update(Food food);
 	
 	/**
-	 * Gets a list of all food
+	 * Retrieves all foods currently in storage.
 	 * @return
 	 */
-	List<Food> getAllFood();
+	List<Food> getAllFoods();
 	
 	/**
-	 * Gets a single food by ID
-	 * @param animalId
+	 * Retrieve information about a single food from storage with a matching foodId
+	 * @param foodId
 	 * @return
 	 */
-	Food getFoodById(Integer foodId);
-	
-	/**
-	 * Removes an item by ID
-	 * @param animalId
-	 */
-	void remove(Integer foodId);
+	Food getByFoodId(Integer foodId);
 
 }

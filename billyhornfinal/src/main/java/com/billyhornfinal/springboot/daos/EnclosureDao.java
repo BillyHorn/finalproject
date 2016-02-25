@@ -2,8 +2,13 @@ package com.billyhornfinal.springboot.daos;
 
 import java.util.List;
 
-import com.billyhornfinal.springboot.models.Enclosure;
+import com.billyhornfinal.springboot.entities.Enclosure;
 
+/**
+ * The methods declared in this interface are to provide basic CRUD functionality related to enclosure objects.
+ * @author bHorn
+ *
+ */
 public interface EnclosureDao {
 	
 	/**
@@ -11,30 +16,24 @@ public interface EnclosureDao {
 	 * @param enclosure
 	 */
 	void add(Enclosure enclosure);
-	
+
 	/**
-	 * Updates information about an enclosure
+	 * Updates the information about an enclosure already in storage.
 	 * @param enclosure
 	 */
 	void update(Enclosure enclosure);
 	
 	/**
-	 * Gets a list of all enclosures
+	 * Retrieves all enclosures currently in storage.
 	 * @return
 	 */
 	List<Enclosure> getAllEnclosures();
 	
 	/**
-	 * Gets a single enclosure by ID
+	 * Retrieve information about a single enclosure from storage with a matching enclosureId
 	 * @param enclosureId
 	 * @return
 	 */
-	Enclosure getEnclosureById(Integer enclosureId);
-	
-	/**
-	 * Removes an item by ID
-	 * @param animalId
-	 */
-	void remove(Integer enclosureId);
+	Enclosure getByEnclosureId(Integer enclosureId);
 
 }

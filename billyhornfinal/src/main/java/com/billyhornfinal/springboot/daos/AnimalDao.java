@@ -2,12 +2,11 @@ package com.billyhornfinal.springboot.daos;
 
 import java.util.List;
 
-import com.billyhornfinal.springboot.models.Animal;
+import com.billyhornfinal.springboot.entities.Animal;
 
 /**
- * 
- * Methods in the interface are for basic CRUD functionality
- * @author bhorn
+ * The methods declared in this interface are to provide basic CRUD functionality related to animal objects.
+ * @author bHorn
  *
  */
 public interface AnimalDao {
@@ -17,30 +16,24 @@ public interface AnimalDao {
 	 * @param animal
 	 */
 	void add(Animal animal);
-	
+
 	/**
-	 * Updates information about an animal
+	 * Updates the information about an animal already in storage.
 	 * @param animal
 	 */
 	void update(Animal animal);
 	
 	/**
-	 * Gets a list of all animals
+	 * Retrieves all animals currently in storage.
 	 * @return
 	 */
 	List<Animal> getAllAnimals();
 	
 	/**
-	 * Gets a single animal by ID
+	 * Retrieve information about a single animal from storage with a matching animalId
 	 * @param animalId
 	 * @return
 	 */
-	Animal getAnimalById(Integer animalId);
-	
-	/**
-	 * Removes an item by ID
-	 * @param animalId
-	 */
-	void remove(Integer animalId);
+	Animal getByAnimalId(Integer animalId);
 
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-	<title>Final Zookeepr Project</title>
+	<title>Expense Report Project</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 	<script src="https://code.angularjs.org/1.4.5/angular-route.js"></script> 
@@ -12,15 +12,21 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 	<script src="js/app.js"></script>
     <script src="js/routes.js"></script>
-    <script src="js/controllers/enclosureController.js"></script>
-    <script src="js/controllers/homeController.js"></script>
+	<script src="js/controllers/enclosureController.js"></script>	
 
 </head>
 
+
+
 <body ng-app="zooApp">
 <div>
-	<a ui-sref="home">Home</a>
-	<a ui-sref="enclosure">Enclosure</a>
+	<nav class="navbar navbar-default navbar-static-top">
+  		<div class="container">
+  			<a class="navbar-brand" ui-sref="enclosure">Enclosures</a>
+  			<a class="navbar-brand" ui-sref="animal">Animals</a>
+  			<a class="navbar-brand" ui-sref="food">Foods</a>
+  		</div>
+	</nav>
 </div>
 	<div>
    		<ui-view></ui-view>
