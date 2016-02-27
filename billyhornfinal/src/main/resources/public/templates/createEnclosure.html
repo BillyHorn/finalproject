@@ -1,0 +1,29 @@
+<form novalidate name="enclosureForm" class="form-horizontal">
+
+<div class="form-group">
+	<label for="enclosureName" class="col-sm-2 control-label textLeft">Enclosure Name: </label>
+	<input id="enclosureName" name="enclosureName" type="text" ng-model="enclosureName" ng-required/>
+</div>
+<div class="form-group">
+	<label for="animalAmount" class="col-sm-2 control-label textLeft">Number of Animals: </label>
+	<input id="animalAmount" name="animalAmount" type="text" ng-model="animalAmount">
+</div>
+<div class="form-group">
+	<label for="feedingTime" class="col-sm-2 control-label textLeft">Feeding Time: </label>
+	<input id="feedingTime" name="feedingTime" type="time" ng-model="feedingTime">
+</div>
+<div class="form-group">
+	<label for="condition" class="col-sm-2 control-label textLeft">Condition: </label>
+	<input id="condition" name="condition" type="text" ng-model="condition">
+</div>
+<div class="form-group">
+	<label for="animal" class="col-sm-2 control-label textLeft">Animal: </label>
+	<select id="animal" name="animal">
+		<option ng-repeat="animals in animalList" ng-value="animals.animalId">{{animals.commonName}}</option>
+	</select>
+</div>
+</form>
+
+<input type="submit" ng-click="sendEnclosure()" value="Create an animal">
+<p ng-show="worked">Animal has been Created Successfully</p>
+<p ng-show="error">Animal failed to create</p>

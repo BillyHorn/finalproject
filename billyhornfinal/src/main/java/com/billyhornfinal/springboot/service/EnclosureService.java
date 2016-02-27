@@ -38,5 +38,11 @@ public interface EnclosureService {
 	 *             than 0
 	 */
 	Enclosure getByEnclosureId(Integer enclosureId) throws InvalidInputException;
+	
+	/**
+	 * Remove a single enclosure's information from database
+	 * @param enclosureId
+	 */
+	public void deleteEnclosure(Integer enclosureId);
 
 }

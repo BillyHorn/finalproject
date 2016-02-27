@@ -1,0 +1,13 @@
+<div>
+	<a ui-sref="createFood">
+		<button>Create New Food</button>
+	</a>
+</div>
+
+<h3>Food</h3>
+<ul>
+	<li ng-repeat="foods in foodList">
+	<a ng-click="prepFood(foods.foodId)">{{foods.foodName}}</a>
+	<button ng-click="removeFood(foods.foodId)">Remove</button>
+	</li>
+</ul>

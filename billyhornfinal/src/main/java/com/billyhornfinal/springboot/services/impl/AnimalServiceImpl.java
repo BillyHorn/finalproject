@@ -42,4 +42,13 @@ public class AnimalServiceImpl implements AnimalService{
 		return animalDao.getByAnimalId(animalId);
 	}
 
+	/**
+	 * 
+	 * @param animalId the animal to be deleted from the database
+	 */
+	@Override
+	public void deleteAnimal(Integer animalId) {
+		animalDao.deleteAnimal(animalId);
+	}
+
 }

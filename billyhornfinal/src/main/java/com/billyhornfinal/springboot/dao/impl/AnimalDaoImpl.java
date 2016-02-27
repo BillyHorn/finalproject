@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import com.billyhornfinal.springboot.daos.AnimalDao;
 import com.billyhornfinal.springboot.entities.Animal;
+import com.billyhornfinal.springboot.entities.Enclosure;
 
 /**
  * Communicates with the database regarding animals.
@@ -46,6 +47,18 @@ public class AnimalDaoImpl implements AnimalDao{
 
 	public Animal getByAnimalId(Integer animalId) {
 		return em.createQuery("SELECT a FROM Animal a WHERE a.animalId = :animalId", Animal.class).setParameter("animalId", animalId).getSingleResult();
+	}
+
+	/**
+	 * 
+	 * @param animalId the animal being removed from the database
+	 */
+	@Override
+	public void deleteAnimal(Integer animalId) {
+		Animal animal = em.find(Animal.class, animalId);
+		em.remove(animal);
+		em.flush();
+		
 	}
 
 }

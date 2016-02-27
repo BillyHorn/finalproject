@@ -46,5 +46,15 @@ public class EnclosureWebService {
 	public Enclosure getEnclosureByID(@PathVariable Integer id) throws InvalidInputException{ 
 		return enclosureService.getByEnclosureId(id);
 	}
+	
+	/** DELETE
+	 * 
+	 * @param enclosureId the enclosure being removed from the database
+	 */
+	@RequestMapping(value="/enclosure/{enclosureId}", method=RequestMethod.DELETE)
+	public void deleteEnclosure(@PathVariable Integer enclosureId)
+	{
+		enclosureService.deleteEnclosure(enclosureId);
+	}
 
 }

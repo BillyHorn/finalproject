@@ -1,10 +1,19 @@
-angular.module('zooApp').controller('enclosureController', ['$scope', '$state', '$http', function($scope, $state, $http){
+angular.module('zooApp').controller('enclosureController', ['$scope', '$state', '$http', 'getEnclosureService', function($scope, $state, $http, getEnclosureService){
 
 	$scope.enclosureList = []
 	$http.get('/enclosures').then(function(data){
-		console.log($scope.enclosureList);
 		$scope.enclosureList = data.data;
-		console.log($scope.enclosureList);
 	});
+	
+	$scope.prepEnclosure = function(id){
+		getEnclosureService.setEnclosure(id)
+		$state.go("editEnclosure");
+	};
+	
+	$scope.removeEnclosure = function(id){
+		$http.delete('/enclosure/'+id).then(function(data){
+			$state.reload();
+		});
+	};
 
-}])
+}]);

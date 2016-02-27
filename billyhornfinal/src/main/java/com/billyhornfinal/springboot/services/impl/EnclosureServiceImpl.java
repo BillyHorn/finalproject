@@ -42,4 +42,13 @@ public class EnclosureServiceImpl implements EnclosureService{
 		return enclosureDao.getByEnclosureId(enclosureId);
 	}
 
+	/**
+	 * 
+	 * @param enclosureId the enclosure to be deleted from the database
+	 */
+	@Override
+	public void deleteEnclosure(Integer enclosureId) {
+		enclosureDao.deleteEnclosure(enclosureId);
+	}
+
 }

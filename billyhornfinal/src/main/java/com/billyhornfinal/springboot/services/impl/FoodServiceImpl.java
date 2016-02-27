@@ -42,4 +42,12 @@ public class FoodServiceImpl implements FoodService{
 		return foodDao.getByFoodId(foodId);
 	}
 
+	/**
+	 * 
+	 * @param foodId the food to be deleted from the database
+	 */
+	public void deleteFood(Integer foodId) {
+		foodDao.deleteFood(foodId);
+	}
+
 }

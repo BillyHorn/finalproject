@@ -39,5 +39,11 @@ public interface AnimalService {
 	 *             than 0
 	 */
 	Animal getByAnimalId(Integer animalId) throws InvalidInputException;
+	
+	/**
+	 * Remove a single animal's information from database
+	 * @param animalId
+	 */
+	public void deleteAnimal(Integer animalId);
 
 }

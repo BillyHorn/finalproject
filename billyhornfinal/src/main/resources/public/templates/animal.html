@@ -1,0 +1,14 @@
+<div>
+	<a ui-sref="createAnimal">
+		<button>Create New Animal</button>
+	</a>
+</div>
+
+<h3>Animal</h3>
+<ul>
+	<li ng-repeat="animals in animalList">
+	<a ng-click="prepAnimal(animals.animalId)">{{animals.commonName}}, {{animals.scientificName}}</a>
+	<a href="{{animals.infoLink}}" target="_blank">More Info</a>
+	<button ng-click="removeAnimal(animals.animalId)">Remove</button>
+	</li>
+</ul>

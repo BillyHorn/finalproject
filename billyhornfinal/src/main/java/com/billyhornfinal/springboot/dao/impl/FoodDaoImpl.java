@@ -48,4 +48,14 @@ public class FoodDaoImpl implements FoodDao{
 		return em.createQuery("SELECT f FROM Food f WHERE f.foodId = :foodId", Food.class).setParameter("foodId", foodId).getSingleResult();
 	}
 
+	/**
+	 * 
+	 * @param foodId the food being removed from the database
+	 */
+	public void deleteFood(Integer foodId) {
+		Food food = em.find(Food.class, foodId);
+		em.remove(food);
+		em.flush();
+	}
+
 }

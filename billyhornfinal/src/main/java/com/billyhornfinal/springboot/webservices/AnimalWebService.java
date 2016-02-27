@@ -47,4 +47,14 @@ public class AnimalWebService {
 		return animalService.getByAnimalId(id);
 	}
 	
+	/** DELETE
+	 * 
+	 * @param animalId the animal being removed from the database
+	 */
+	@RequestMapping(value="/animal/{animalId}", method=RequestMethod.DELETE)
+	public void deleteAnimal(@PathVariable Integer animalId)
+	{
+		animalService.deleteAnimal(animalId);
+	}
+	
 }

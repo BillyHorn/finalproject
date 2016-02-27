@@ -38,5 +38,11 @@ public interface FoodService {
 	 *             than 0
 	 */
 	Food getByFoodId(Integer foodId) throws InvalidInputException;
+	
+	/**
+	 * Remove a single food's information from database
+	 * @param foodId
+	 */
+	public void deleteFood(Integer foodId);
 
 }

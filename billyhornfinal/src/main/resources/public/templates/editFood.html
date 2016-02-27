@@ -1,0 +1,19 @@
+<form novalidate name="foodForm" class="form-horizontal">
+
+<div class="form-group">
+	<label for="foodName" class="col-sm-2 control-label textLeft">Food: </label>
+	<input id="foodName" name="foodName" type="text" ng-model="foodName" ng-value="foodToView.foodName" ng-required/>
+</div>
+<div class="form-group">
+	<label for="vendor" class="col-sm-2 control-label textLeft">Vendor: </label>
+	<input id="vendor" name="vendor" type="text" ng-model="vendor" ng-value="foodToView.vendor">
+</div>
+<div class="form-group">
+	<label for="category" class="col-sm-2 control-label textLeft">Category:</label>
+	<input id="category" name="category" type="text" ng-model="category" ng-value="foodToView.category">
+</div>
+</form>
+
+<input type="submit" ng-click="sendFood()" value="Submit Edits">
+<p ng-show="worked">Food has been edited Successfully</p>
+<p ng-show="error">Food failed to edit</p>

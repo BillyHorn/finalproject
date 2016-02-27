@@ -35,5 +35,11 @@ public interface FoodDao {
 	 * @return
 	 */
 	Food getByFoodId(Integer foodId);
+	
+	/**
+	 * Removes information about a single food from storage matching foodId
+	 * @param food
+	 */
+	public void deleteFood(Integer foodId);
 
 }

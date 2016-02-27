@@ -1,0 +1,25 @@
+<form novalidate name="animalForm" class="form-horizontal">
+
+<div class="form-group">
+	<label for="commonName" class="col-sm-2 control-label textLeft">Common Name: </label>
+	<input id="commonName" name="commonName" type="text" ng-model="commonName" ng-required/>
+</div>
+<div class="form-group">
+	<label for="scientificName" class="col-sm-2 control-label textLeft">Scientific Name: </label>
+	<input id="scientificName" name="scientificName" type="text" ng-model="scientificName">
+</div>
+<div class="form-group">
+	<label for="food" class="col-sm-2 control-label textLeft">Food: </label>
+	<select id="food" name="food">
+		<option ng-repeat="foods in foodList" ng-value="foods.foodId">{{foods.foodName}}</option>
+	</select>
+</div>
+<div class="form-group">
+	<label for="infoLink" class="col-sm-2 control-label textLeft">Info Link: </label>
+	<input id="infoLink" name="infoLink" type="text" ng-model="infoLink">
+</div>
+</form>
+
+<input type="submit" ng-click="sendAnimal()" value="Create an animal">
+<p ng-show="worked">Animal has been Created Successfully</p>
+<p ng-show="error">Animal failed to create</p>

@@ -35,5 +35,11 @@ public interface AnimalDao {
 	 * @return
 	 */
 	Animal getByAnimalId(Integer animalId);
+	
+	/**
+	 * Removes information about a single animal from storage matching animalId
+	 * @param animalId
+	 */
+	public void deleteAnimal(Integer animalId);
 
 }

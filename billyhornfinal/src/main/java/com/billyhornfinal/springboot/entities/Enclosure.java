@@ -1,7 +1,5 @@
 package com.billyhornfinal.springboot.entities;
 
-import java.sql.Time;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +16,7 @@ public class Enclosure {
 	private Integer enclosureId;
 	private String enclosureName;
 	private Integer animalAmount;
-	private Time feedingTime;
+	private String feedingTime;
 	private String condition;
 	private Animal animalId;
 	
@@ -52,11 +50,11 @@ public class Enclosure {
 	}
 
 	@Column(name="feedingtime")
-	public Time getFeedingTime() {
+	public String getFeedingTime() {
 		return feedingTime;
 	}
 
-	public void setFeedingTime(Time feedingTime) {
+	public void setFeedingTime(String feedingTime) {
 		this.feedingTime = feedingTime;
 	}
 

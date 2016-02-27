@@ -35,5 +35,11 @@ public interface EnclosureDao {
 	 * @return
 	 */
 	Enclosure getByEnclosureId(Integer enclosureId);
+	
+	/**
+	 * Removes information about a single enclosure from storage matching enclosureId
+	 * @param enclosureId
+	 */
+	public void deleteEnclosure(Integer enclosureId);
 
 }

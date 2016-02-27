@@ -9,11 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.billyhornfinal.springboot.entities.Animal;
 import com.billyhornfinal.springboot.entities.Food;
 import com.billyhornfinal.springboot.service.FoodService;
 import com.billyhornfinal.springboot.service.InvalidInputException;
-import com.billyhornfinal.springboot.services.impl.AnimalServiceImpl;
 import com.billyhornfinal.springboot.services.impl.FoodServiceImpl;
 
 @RestController
@@ -41,12 +39,23 @@ public class FoodWebService {
 	
 	@RequestMapping(value="/food/{id}", method = RequestMethod.PUT)
 	public void updateFood(@PathVariable Integer id, @RequestBody Food food){
+		System.out.println(food);
 		foodService.update(food);
 	}
 	
 	@RequestMapping(value="/food/{id}", method=RequestMethod.GET)
 	public Food getFoodByID(@PathVariable Integer id) throws InvalidInputException{ 
 		return foodService.getByFoodId(id);
+	}
+	
+	/** DELETE
+	 * 
+	 * @param foodId the food being removed from the database
+	 */
+	@RequestMapping(value="/food/{foodId}", method=RequestMethod.DELETE)
+	public void deleteFood(@PathVariable Integer foodId)
+	{
+		foodService.deleteFood(foodId);
 	}
 
 }

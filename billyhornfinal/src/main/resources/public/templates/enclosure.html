@@ -1,4 +1,13 @@
+<div>
+	<a ui-sref="createEnclosure">
+		<button>Create New Enclosure</button>
+	</a>
+</div>
+
 <h3>Enclosure</h3>
 <ul>
-	<li ng-repeat="enclosures in enclosureList">{{enclosures.enclosureName}}</li>
+	<li ng-repeat="enclosures in enclosureList">
+	<a ng-click="prepEnclosure(enclosures.enclosureId)">{{enclosures.enclosureName}}</a>
+	<button ng-click="removeEnclosure(enclosures.enclosureId)">Remove</button>
+	</li>
 </ul>
