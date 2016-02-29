@@ -9,6 +9,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ * Enclosure entity to match database table
+ * @author bhorn
+ *
+ */
 @Entity
 @Table(name="enclosures")
 public class Enclosure {
@@ -67,6 +72,10 @@ public class Enclosure {
 		this.condition = condition;
 	}
 
+	/**
+	 * Joins the enclosure and animal table
+	 * @return
+	 */
 	@ManyToOne(optional=false, targetEntity = Animal.class)
 	@JoinColumn(name="animalid")
 	public Animal getAnimalId() {

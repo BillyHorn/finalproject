@@ -24,20 +24,32 @@ public class AnimalServiceImpl implements AnimalService{
 		this.animalDao = animalDao;
 	}
 	
+	/**
+	 * Add an animal
+	 */
 	public void add(Animal animal) {
 		animalDao.add(animal);
 		
 	}
 
+	/**
+	 * Update an animal
+	 */
 	public void update(Animal animal) {
 		animalDao.update(animal);
 		
 	}
 
+	/**
+	 * Get a list of all animals
+	 */
 	public List<Animal> getAnimals() {
 		return animalDao.getAllAnimals();
 	}
 
+	/**
+	 * Get a single animal
+	 */
 	public Animal getByAnimalId(Integer animalId) throws InvalidInputException {
 		return animalDao.getByAnimalId(animalId);
 	}

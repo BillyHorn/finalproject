@@ -24,20 +24,32 @@ public class EnclosureServiceImpl implements EnclosureService{
 		this.enclosureDao = enclosureDao;
 	}
 	
+	/**
+	 * Add an enclosure
+	 */
 	public void add(Enclosure enclosure) {
 		enclosureDao.add(enclosure);
 		
 	}
 
+	/**
+	 * Update an enclosure
+	 */
 	public void update(Enclosure enclosure) {
 		enclosureDao.update(enclosure);
 		
 	}
 
+	/**
+	 * Get a list of all enclosures
+	 */
 	public List<Enclosure> getEnclosures() {
 		return enclosureDao.getAllEnclosures();
 	}
 
+	/**
+	 * Get a single enclosure
+	 */
 	public Enclosure getByEnclosureId(Integer enclosureId) throws InvalidInputException {
 		return enclosureDao.getByEnclosureId(enclosureId);
 	}

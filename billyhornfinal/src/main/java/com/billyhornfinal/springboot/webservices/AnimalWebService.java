@@ -27,21 +27,37 @@ public class AnimalWebService {
 		this.animalService = animalService;
 	}
 	
+	/**
+	 * Add an animal
+	 * @param animal
+	 */
 	@RequestMapping(value="/animal", method=RequestMethod.POST)
 	public void addAnimal(@RequestBody Animal animal){
 		animalService.add(animal);
 	}
-	
+	/**
+	 * Get all animals
+	 * @return
+	 */
 	@RequestMapping(value="/animals", method=RequestMethod.GET)
 	public List<Animal> getAnimals(){
 		return animalService.getAnimals();
 	}
-	
+	/**
+	 * Update an animal
+	 * @param id
+	 * @param animal
+	 */
 	@RequestMapping(value="/animal/{id}", method = RequestMethod.PUT)
 	public void updateAnimal(@PathVariable Integer id, @RequestBody Animal animal){
 		animalService.update(animal);
 	}
-	
+	/**
+	 * Get a single animal
+	 * @param id
+	 * @return
+	 * @throws InvalidInputException
+	 */
 	@RequestMapping(value="/animal/{id}", method=RequestMethod.GET)
 	public Animal getAnimalByID(@PathVariable Integer id) throws InvalidInputException{ 
 		return animalService.getByAnimalId(id);

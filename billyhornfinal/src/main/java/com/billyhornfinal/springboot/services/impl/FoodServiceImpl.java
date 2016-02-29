@@ -24,20 +24,32 @@ public class FoodServiceImpl implements FoodService{
 		this.foodDao = foodDao;
 	}
 	
+	/**
+	 * Add a food
+	 */
 	public void add(Food food) {
 		foodDao.add(food);
 		
 	}
 
+	/**
+	 * Update a food
+	 */
 	public void update(Food food) {
 		foodDao.update(food);
 		
 	}
 
+	/**
+	 * Get all foods
+	 */
 	public List<Food> getFoods() {
 		return foodDao.getAllFoods();
 	}
 
+	/**
+	 * Get a single food
+	 */
 	public Food getByFoodId(Integer foodId) throws InvalidInputException {
 		return foodDao.getByFoodId(foodId);
 	}

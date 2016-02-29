@@ -26,22 +26,37 @@ public class EnclosureWebService {
 	public void setEnclosureService(EnclosureServiceImpl enclosureService) {
 		this.enclosureService = enclosureService;
 	}
-	
+	/**
+	 * Add an enclosure
+	 * @param enclosure
+	 */
 	@RequestMapping(value="/enclosure", method=RequestMethod.POST)
 	public void addEnclosure(@RequestBody Enclosure enclosure){
 		enclosureService.add(enclosure);
 	}
-	
+	/**
+	 * Get all enclosures
+	 * @return
+	 */
 	@RequestMapping(value="/enclosures", method=RequestMethod.GET)
 	public List<Enclosure> getEnclosures(){
 		return enclosureService.getEnclosures();
 	}
-	
+	/**
+	 * Update an enclosure
+	 * @param id
+	 * @param enclosure
+	 */
 	@RequestMapping(value="/enclosure/{id}", method = RequestMethod.PUT)
 	public void updateEnclosure(@PathVariable Integer id, @RequestBody Enclosure enclosure){
 		enclosureService.update(enclosure);
 	}
-	
+	/**
+	 * Get a single enclosure
+	 * @param id
+	 * @return
+	 * @throws InvalidInputException
+	 */
 	@RequestMapping(value="/enclosure/{id}", method=RequestMethod.GET)
 	public Enclosure getEnclosureByID(@PathVariable Integer id) throws InvalidInputException{ 
 		return enclosureService.getByEnclosureId(id);

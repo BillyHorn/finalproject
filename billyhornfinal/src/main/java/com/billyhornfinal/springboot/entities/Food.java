@@ -7,6 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * Food entity to match database table
+ * @author bhorn
+ *
+ */
 @Entity
 @Table(name="foods")
 public class Food {

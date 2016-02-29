@@ -6,6 +6,8 @@ angular.module('zooApp').controller('editAnimalController', ['$scope', '$state',
 		$scope.foodList = data.data;
 	});
 	
+	$scope.selected = 1;
+	
 	$scope.animalToView = {};
 	
 	$scope.animalId = getAnimalService.curAnimal;
@@ -21,7 +23,8 @@ angular.module('zooApp').controller('editAnimalController', ['$scope', '$state',
 	  getAnimalService.getById($scope.animalId).then(
 		  function(success){
 				  $scope.animalToView = success.data;
-				  console.log($scope.animalToView);
+				  $scope.selected = $scope.animalToView.foodId.foodId;
+				  console.log($scope.selected);
 				  return success.data;
 			  },function(error){
 

@@ -25,27 +25,44 @@ public class EnclosureDaoImpl implements EnclosureDao{
 	@PersistenceContext
 	private EntityManager em;
 
+	/**
+	 * set up entity manager
+	 * @param em
+	 */
 	public void setEm(EntityManager em) {
 		this.em = em;
 	}
 	
+	/**
+	 * Add an enclosure
+	 */
 	public void add(Enclosure enclosure) {
 		em.persist(enclosure);
 		em.flush();
 		
 	}
 
+	/**
+	 * update an enclosure
+	 */
 	public void update(Enclosure enclosure) {
 		em.merge(enclosure);
 		em.flush();
 		
 	}
 
+	/**
+	 * Get a list of all enclosures
+	 */
 	public List<Enclosure> getAllEnclosures() {
 		List<Enclosure> enclosureList = em.createQuery("SELECT e FROM Enclosure e", Enclosure.class).getResultList();
 		return enclosureList;
 	}
 
+	/**
+	 * Get a single enclosure
+	 * @param enclosureId
+	 */
 	public Enclosure getByEnclosureId(Integer enclosureId) {
 		return em.createQuery("SELECT e FROM Enclosure e WHERE e.enclosureId = :enclosureId", Enclosure.class).setParameter("enclosureId", enclosureId).getSingleResult();
 	}

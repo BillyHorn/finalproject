@@ -9,6 +9,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ * Animal entity to match database table
+ * @author bhorn
+ *
+ */
 @Entity
 @Table(name="animals")
 public class Animal {
@@ -42,6 +47,10 @@ public class Animal {
 	public void setScientificName(String scientificName) {
 		this.scientificName = scientificName;
 	}
+	/**
+	 * Joins the animal and food table
+	 * @return
+	 */
 	@ManyToOne(optional=false, targetEntity = Food.class)
 	@JoinColumn(name="foodid")
 	public Food getFoodId() {
