@@ -7,7 +7,7 @@
 <h3>Food</h3>
 <ul>
 	<li ng-repeat="foods in foodList">
-	<a ng-click="prepFood(foods.foodId)">{{foods.foodName}}</a>
-	<button ng-click="removeFood(foods.foodId)">Remove</button>
+	<a ng-click="prepFood(foods.foodId)" class="col-sm-8">{{foods.foodName}}</a>
+	<button ng-click="removeFood(foods.foodId)" class="col-sm-4">Remove</button>
 	</li>
 </ul>

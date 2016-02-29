@@ -22,13 +22,13 @@ insert into animals(commonname, scientificname, infolink, foodid) values ('Skunk
 insert into animals(commonname, scientificname, infolink, foodid) values ('Sloth', 'Bradypus tridactylus', 'https://en.wikipedia.org/wiki/Pale-throated_sloth', 4);
 insert into animals(commonname, scientificname, infolink, foodid) values ('Goat', 'Goat', 'https://en.wikipedia.org/wiki/Goat', 10);
 delete from enclosures
-insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (5, 'Great', 'Panda Pagoda', '14:00:00', 1);
-insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (10, 'Good', 'Penguin Preserve', '08:00:00', 2);
-insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (15, 'Great', 'Zebra Zoo', '18:00:00', 3);
-insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (20, 'Criminal', 'Orca Orphanage', '10:00:00', 4);
-insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (25, 'Bad', 'Cow Castle', '6:00:00', 5);
-insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (30, 'Okay', 'Lemur Lookout', '4:00:00', 6);
-insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (35, 'Great', 'White Tiger Wilderness Trail', '2:00:00', 7);
-insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (40, 'Great', 'Skunk Saloon', '12:00:00', 8);
-insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (45, 'Great', 'Sloth Sanctuary', '16:00:00', 9);
-insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (50, 'Great', 'Goat Gorge', '20:00:00', 10);
+insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (5, 'Great', 'Panda Pagoda', '04:00:PM', 1);
+insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (10, 'Good', 'Penguin Preserve', '08:00:AM', 2);
+insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (15, 'Great', 'Zebra Zoo', '8:00:AM', 3);
+insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (20, 'Criminal', 'Orca Orphanage', '10:00:PM', 4);
+insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (25, 'Bad', 'Cow Castle', '6:00:PM', 5);
+insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (30, 'Okay', 'Lemur Lookout', '4:00:AM', 6);
+insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (35, 'Great', 'White Tiger Wilderness Trail', '2:00:AM', 7);
+insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (40, 'Great', 'Skunk Saloon', '12:00:AM', 8);
+insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (45, 'Great', 'Sloth Sanctuary', '06:00:PM', 9);
+insert into enclosures(animalamount, condition, enclosurename, feedingtime, animalid) values (50, 'Great', 'Goat Gorge', '02:00:PM', 10);

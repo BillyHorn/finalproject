@@ -7,8 +7,8 @@
 <h3>Animal</h3>
 <ul>
 	<li ng-repeat="animals in animalList">
-	<a ng-click="prepAnimal(animals.animalId)">{{animals.commonName}}, {{animals.scientificName}}</a>
-	<a href="{{animals.infoLink}}" target="_blank">More Info</a>
-	<button ng-click="removeAnimal(animals.animalId)">Remove</button>
+	<a ng-click="prepAnimal(animals.animalId)" class="col-sm-6">{{animals.commonName}}, {{animals.scientificName}}</a>
+	<a href="{{animals.infoLink}}" target="_blank" class="col-sm-4">More Info</a>
+	<button ng-click="removeAnimal(animals.animalId)" class="col-sm-2">Remove</button>
 	</li>
 </ul>

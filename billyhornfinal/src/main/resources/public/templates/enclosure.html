@@ -7,7 +7,7 @@
 <h3>Enclosure</h3>
 <ul>
 	<li ng-repeat="enclosures in enclosureList">
-	<a ng-click="prepEnclosure(enclosures.enclosureId)">{{enclosures.enclosureName}}</a>
-	<button ng-click="removeEnclosure(enclosures.enclosureId)">Remove</button>
+	<a ng-click="prepEnclosure(enclosures.enclosureId)" class="col-sm-8">{{enclosures.enclosureName}}</a>
+	<button ng-click="removeEnclosure(enclosures.enclosureId)" class="col-sm-4">Remove</button>
 	</li>
 </ul>

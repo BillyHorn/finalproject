@@ -47,7 +47,7 @@ public class EnclosureDaoImpl implements EnclosureDao{
 	}
 
 	public Enclosure getByEnclosureId(Integer enclosureId) {
-		return em.createQuery("SELECT e FROM Enclosure e WHERE e.enclosreId = :enclosureId", Enclosure.class).setParameter("enclosureId", enclosureId).getSingleResult();
+		return em.createQuery("SELECT e FROM Enclosure e WHERE e.enclosureId = :enclosureId", Enclosure.class).setParameter("enclosureId", enclosureId).getSingleResult();
 	}
 	
 	/**

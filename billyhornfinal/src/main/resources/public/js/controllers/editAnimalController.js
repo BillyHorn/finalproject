@@ -21,6 +21,7 @@ angular.module('zooApp').controller('editAnimalController', ['$scope', '$state',
 	  getAnimalService.getById($scope.animalId).then(
 		  function(success){
 				  $scope.animalToView = success.data;
+				  console.log($scope.animalToView);
 				  return success.data;
 			  },function(error){
 

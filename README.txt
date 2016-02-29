@@ -3,7 +3,8 @@
 1) Open  PgAdmin
 2) Navigate to your localhost and put in the password: root
 3) Right-Click on databases and select New Database
-4) Enter zoo for the name and postgres for the Owner and hit ok
+4) Enter final-project for the name and postgres for the Owner and hit ok
+	-Alternatively just make sure a database with the name final-project exists that is empty
 5) Open Eclipse
 6) Select File and chose import
 7) Open the maven option
